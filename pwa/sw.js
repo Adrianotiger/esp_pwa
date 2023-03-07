@@ -1,12 +1,12 @@
-const cacheName = "jsESPPWA-v1";
+const cacheName = "jsESPPWA-v2";
 const appShellFiles = [
-  "/pwa/",
-  "/pwa/index.html",
-  "/pwa/app.js",
-  "/pwa/page.css",
-  "/pwa/images/icon128.png",
-  "/pwa/images/icon144.png",
-  "/pwa/images/icon512.png",
+  "/",
+  "/index.html",
+  "/app.js",
+  "/page.css",
+  "/images/icon128.png",
+  "/images/icon144.png",
+  "/images/icon512.png",
 ];
 
 self.addEventListener('install', function(event) {
