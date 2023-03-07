@@ -1,4 +1,4 @@
-const cacheName = "jsESPPWA-v3";
+const cacheName = "jsESPPWA-v4";
 const appShellFiles = [
   "index.html",
   "app.js",
