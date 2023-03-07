@@ -1,6 +1,7 @@
 # ESP PWA
  An App for your smartphone or desktop to check if an ESP or Arduino is present on the local network, open the IP if available and launch a second PWA to control your device from a remote webpage.  
- ![image](https://user-images.githubusercontent.com/7373079/223377531-0f753896-e954-4347-83a6-d037c5d4050c.png)
+ ![image](https://user-images.githubusercontent.com/7373079/223377531-0f753896-e954-4347-83a6-d037c5d4050c.png) => redirect to ESP => ![image](https://user-images.githubusercontent.com/7373079/223378939-6d52cd5b-8d0f-4b6b-af8e-5a8720306700.png)
+
 
  
  ## Description
