@@ -1,0 +1,39 @@
+{
+  "short_name": "ESP PWA",
+  "name": "Local ESP32 PWA",
+  "description": "Start a local project on the ESP32",
+  "id": "Local_ESP_PWA",
+  "icons": [
+    {
+      "src": "images/icon144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "https://adrianotiger.github.io/esp_pwa/pwa/",
+  "scope": "https://adrianotiger.github.io/esp_pwa/pwa/",
+  "background_color": "#008184",
+  "display": "standalone",
+  "theme_color": "#008184",
+  "orientation": "portrait",
+  "lang": "en",
+  "display_override": [
+    "standalone"
+  ],
+  "categories": [
+    "productivity",
+    "utilities"
+  ]
+}

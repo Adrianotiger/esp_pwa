@@ -1,0 +1,180 @@
+html
+{
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+}
+
+body
+{
+  width: 100vw;
+  height: 100%;
+  max-height: 100vh;
+  margin: 0px;
+  background: linear-gradient(to bottom, #40b1b4, #008184);
+  text-align: center;
+  font-family: sans-serif;
+  color: #ffe;
+  overflow: hidden;
+}
+
+.title
+{
+  position: relative;
+  height: 10vh;
+  width: 98vw;
+  overflow: hidden;
+}
+
+.title h1
+{
+  width:100%;
+  color: #fff;
+  letter-spacing: 0.5vh;
+  font-size: 4vh;
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+
+@keyframes title_ani {
+  0% {
+    scale: 200%;
+    opacity: 0.2;
+  }
+  70% {
+    scale: 90%;
+    opacity: 1.0;
+  }
+  100% {
+    scale: 100%;
+    opacity: 1.0;
+  }
+}
+
+.title h1:first-child
+{
+  filter: drop-shadow(2px 2px 6px #f88) blur(1px);
+  text-shadow: -2px -1px #a80, 2px 1px #a00;
+  animation: title_ani 1s 1 ease-in-out;
+}
+
+button
+{
+  display: block;
+  position: relative;
+  width: 80vw;
+  height: 10vh;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0%);
+  line-height: 10vh;
+  margin-bottom: 2vh;
+  border-radius: 5vh;
+  border-width: 2px;
+  background: linear-gradient(to bottom, #f44 0%, #f66 30%, #F88 40%, #f00 100%);
+  box-shadow: 0px 0px 0.3vh 0.4vh #fff, 0px 0px 0.1vh 0.5vh #000, inset -0.5vh -0.5vh 2vh 0.5vh #f00;
+  color: #ffd;
+  font-size: 3vh;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+button em
+{
+  float:right;
+  display:inline-block;
+  width: 10vw;
+  margin-left:-5vw;
+  height: 8vh;
+  font-size: 2.5vh;
+  text-align:center;
+  opacity: 0.5;
+}
+
+.yellow
+{
+  background: linear-gradient(to bottom, #dd4 0%, #ee8 30%, #fff 40%, #dd0 100%);
+  box-shadow: 0px 0px 0.3vh 0.4vh #fff, 0px 0px 0.1vh 0.5vh #000, inset -0.5vh -0.5vh 2vh 0.5vh #dd0;
+  color: #005;
+}
+
+.red
+{
+  background: linear-gradient(to bottom, #f44 0%, #f66 30%, #F88 40%, #f00 100%);
+  box-shadow: 0px 0px 0.3vh 0.4vh #fff, 0px 0px 0.1vh 0.5vh #000, inset -0.5vh -0.5vh 2vh 0.5vh #f00;
+  color: #ffd;
+}
+
+.green
+{
+  background: linear-gradient(to bottom, #4a4 0%, #6e6 30%, #8e8 40%, #080 100%);
+  box-shadow: 0px 0px 0.3vh 0.4vh #fff, 0px 0px 0.1vh 0.5vh #000, inset -0.5vh -0.5vh 2vh 0.5vh #0e0;
+  color: #000;
+}
+
+.normal
+{
+  background: linear-gradient(to bottom, #008184 0%, #809194 30%, #aaa 40%, #008184 100%);
+  box-shadow: 0px 0px 0.3vh 0.4vh #fff, 0px 0px 0.1vh 0.5vh #000, inset -0.5vh -0.5vh 2vh 0.5vh #008184;
+  color: #fff;
+}
+
+.overlay
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: rgba(0,0,0,0.4);
+  transition: opacity 0.8s ease-in-out;
+}
+
+.window
+{
+  position: absolute;
+  width: 90vw;
+  height: 80vh;
+  left: 5%;
+  bottom: 10%;
+  background: linear-gradient(to bottom, #40b1b4, #008184);
+  border-radius: 5vh;
+  box-shadow: 2vh 2vh 3vh #000;
+}
+
+.window input
+{
+  width: 80%;
+  height: 5vh;
+  background: transparent;
+  font-size: 4vh;
+  line-height: 4.5vh;
+  text-align: center;
+  border-style: none;
+  border-radius: 5vh;
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  transition: all 1s ease-in;
+}
+
+.window input:focus
+{
+  border-style: double;
+  text-overflow: inherit;
+  text-decoration: inherit;
+  background: linear-gradient(to bottom, #fff, #eea);
+}
+
+.window button
+{
+  position: absolute;
+  bottom: 5%;
+  top: unset;
+}
+
+.window h2
+{
+  margin-bottom: 0.2vh;
+}

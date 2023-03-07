@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local ESP32 PWA</title>
+    <meta name="author" content="Adriano Petrucci">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#008184">
+    <link rel="icon" type="image/png" href="images/icon128.png">
+    <link rel="manifest" href="manifest.json" />
+    <link type="text/css" href="page.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" href="icon192.png">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Local ESP Projects</h1>
+      <h1>Local ESP Projects</h1>
+    </div>
+    <div class="projects">
+    </div>
+    <div style="position:absolute;bottom:1vh;width:100vw;height:10vh;">
+      <button class="normal" onclick="editProject(-1)">＋ NEW PROJECT</button>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+  </body>
+</html>
