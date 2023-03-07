@@ -18,7 +18,7 @@
  - The ESP will load a second PWA from the internet, so you can control your ESP over the web.  
  
  At the end, you have a shortcut on your phone that starts an online PWA to control your device.  
- ![image](https://user-images.githubusercontent.com/7373079/223369618-8bf29b62-e813-40b6-995b-91d1a9d818c7.png)
+ ![image](https://user-images.githubusercontent.com/7373079/223396052-a07db029-e48f-4f0f-bfc1-464d3a946656.png)
 
  
  ## Why? 
