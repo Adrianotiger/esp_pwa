@@ -23,6 +23,27 @@
  
  ## Why? 
  The main problem on the ESP32 as Server is the certificate. You can create one and the ESP can use it to connect to a secure server. But when the ESP is a server, it is more complicated.  
- Chrome is always more aggressive with its "security" rules, so you can't call any unsecure page from a secure page anymore. **Even if it is a local page !** There are some workarounds, works well for some months and then they stops to work. So, you can't make any request from a PWA to a local device anymore in future or already now.  
+ Chrome is always more aggressive with its "security" rules, so you can't call any unsecure page from a secure page anymore. **Even if it is a local page !**  
+ There are some workarounds, works well for some months and then they stops to work. So, you can't make any request from a PWA to a local device anymore in future or already now.  
  With this project, you will be able to load any online PWA (https) directly from your ESP! This will allow you to control it even if it is on an insecure address.
  
+## Setup
+### Step 1 - PWA launcher
+Just open this PWA: https://adrianotiger.github.io/esp_pwa/pwa/  
+You can "install" it, adding it to your home screen.  
+
+### Step 2 - ESP Server
+Load Arduino IDE and upload this sketch to your ESP:  
+https://github.com/Adrianotiger/esp_pwa/tree/main/arduino/  
+Replace the lines:  
+- const char* ssid = "YOUR_SSID";
+- const char* password = "YOUR_PASSWORD";
+- const String pwa_url = "https://adrianotiger.github.io/esp_pwa/web/";
+with your router SSID, password and your second PWA, if you have one.  
+
+### Step 3 - destination PWA
+The ESP PWA from example is hosted here: https://adrianotiger.github.io/esp_pwa/web/  
+Edit it and upload it to your server.
+
+### Step 4 - Enjoy
+Now, you can open sockets and make GET requests from your webpage over unsecure protocols.
