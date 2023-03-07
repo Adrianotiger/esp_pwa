@@ -38,7 +38,7 @@ https://github.com/Adrianotiger/esp_pwa/tree/main/arduino/
 Replace the lines:  
 - const char* ssid = "YOUR_SSID";
 - const char* password = "YOUR_PASSWORD";
-- const String pwa_url = "https://adrianotiger.github.io/esp_pwa/web/";
+- const String pwa_url = "https://adrianotiger.github.io/esp_pwa/web/";  
 with your router SSID, password and your second PWA, if you have one.  
 
 ### Step 3 - destination PWA
