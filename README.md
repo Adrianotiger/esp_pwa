@@ -15,6 +15,8 @@
  - The ESP will load a second PWA from the internet, so you can control your ESP over the web.  
  
  At the end, you have a shortcut on your phone that starts an online PWA to control your device.  
+ ![image](https://user-images.githubusercontent.com/7373079/223369618-8bf29b62-e813-40b6-995b-91d1a9d818c7.png)
+
  
  ## Why? 
  The main problem on the ESP32 as Server is the certificate. You can create one and the ESP can use it to connect to a secure server. But when the ESP is a server, it is more complicated.  
