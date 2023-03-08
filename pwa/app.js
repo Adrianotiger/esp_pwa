@@ -11,6 +11,7 @@ function _CN(e,t,r,n=null){var o=document.createElement(e);if("object"==typeof t
 let projects = [];
 // Timeout, to check if the ESP is available (on Desktops, it need 2000-2300ms, on Android 200-300ms)
 const TIMEOUT = navigator.maxTouchPoints > 1 ? 1500 : 3000;
+let isOpeningProject = false;
 
 //console.log(navigator.userAgentData); 
 //console.log(navigator.maxTouchPoints);
@@ -41,10 +42,12 @@ function editProject(index)
 
 function openProject(index)
 {
+  if(isOpeningProject) return;
   if(index >= 0)
   {
     if(projects[index].active)
     {
+      isOpeningProject = true;
       document.location.href = projects[index].ip;
       return;
     }
@@ -144,6 +147,7 @@ function activateProject(projectId)
   butt.classList.remove("red");
   butt.classList.add("green");
   projects[projectId].active = true;
+  if(projects[projectId].autostart) openProject(projectId);
 }
 
 function checkProject(projectId)
