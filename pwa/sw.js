@@ -1,4 +1,4 @@
-const cacheName = "jsESPPWA-v4";
+const cacheName = "jsESPPWA-v5";
 const appShellFiles = [
   "index.html",
   "app.js",
@@ -24,11 +24,13 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((resp) => {
       return resp || fetch(event.request).then((response) => {
+        /*
         let responseClone = response.clone();
         caches.open(cacheName).then((cache) => {
           if(event.request.method === "GET")
             cache.put(event.request, responseClone);
         });
+        */
         return response;
       });
     }).catch((err) => {
