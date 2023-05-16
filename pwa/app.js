@@ -156,7 +156,7 @@ function checkProject(projectId)
   const link = projects[projectId].ip.replace("http:", "https:");
   
   
-  fetch(link, {method: "OPTIONS", mode: "cors", cache: "no-cache"}).then(c=>{
+  fetch(link, {method: "OPTIONS", mode: "cors", cache: "no-store"}).then(c=>{
     console.log("fetch success: " + link);
     console.log(c);
     activateProject(projectId);
