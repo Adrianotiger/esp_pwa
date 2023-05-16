@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.json" />
     <link type="text/css" href="page.css" rel="stylesheet" />
     <link rel="apple-touch-icon" href="images/icon192.png">
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
   </head>
   <body>
     <div class="title">
@@ -25,7 +25,7 @@
     </div>
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
+        navigator.serviceWorker.register("sw.js?v=2");
       }
     </script>
   </body>
