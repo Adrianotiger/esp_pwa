@@ -10,7 +10,8 @@ function _CN(e,t,r,n=null){var o=document.createElement(e);if("object"==typeof t
 // Projects to check
 let projects = [];
 // Timeout, to check if the ESP is available (on Desktops, it need 2000-2300ms, on Android 200-300ms)
-const TIMEOUT = navigator.maxTouchPoints > 1 ? 1500 : 3000;
+let TIMEOUT = navigator.maxTouchPoints > 1 ? 1500 : 3000;
+let VER = 1.1;
 let isOpeningProject = false;
 
 //console.log(navigator.userAgentData); 
@@ -38,6 +39,33 @@ function editProject(index)
     win.querySelectorAll("input")[1].value = projects[index].ip;
     win.querySelectorAll("input")[2].checked = projects[index].autostart;
   }
+}
+
+function editSettings()
+{
+  let div = _CN("div", {class:"overlay"}, [], document.body);
+  let win = _CN("div", {class:"window"}, [], div);
+  
+  _CN("h3", null, ["App Version: " + VER], win);
+  _CN("a", {href:"https://github.com/Adrianotiger/esp_pwa"}, ["Open GitHub project"], win);
+  _CN("h2", null, ["Settings:"], win);  
+  _CN("h3", null, ["Request timeout:"], win);
+  _CN("input", {type:"number", value:TIMEOUT, min:500, max:20000, placeholder:3000}, null, win).addEventListener("change", (e)=>{
+	if(e.target.value != TIMEOUT)
+	{
+		TIMEOUT = parseInt(e.target.value);
+		localStorage.setItem("timeout", TIMEOUT);
+	}
+  });
+  
+  _CN("button", null, ["CLOSE"], win).addEventListener("click", (e)=>{
+	closeEditWindow(div);
+  });
+  
+  div.addEventListener("click", (e)=>{
+    if(e.srcElement != div) return;
+    closeEditWindow(div);
+  });
 }
 
 function openProject(index)
@@ -176,6 +204,10 @@ function checkProject(projectId)
 }
 
 window.addEventListener("load", ()=>{
+  if(localStorage.getItem("timeout") != null)
+  {
+	  TIMEOUT = Math.max(500, parseInt(localStorage.getItem("timeout")));
+  }
   if(localStorage.getItem("numProjects") != null)
   {
     const prjs = parseInt(localStorage.getItem("numProjects"));

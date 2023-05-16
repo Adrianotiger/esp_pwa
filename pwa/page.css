@@ -18,6 +18,11 @@ body
   overflow: hidden;
 }
 
+a
+{
+  color: #fff;
+}
+
 .title
 {
   position: relative;
@@ -79,6 +84,14 @@ button
   font-weight: normal;
   text-overflow: ellipsis;
   cursor: pointer;
+}
+
+.bottomb
+{
+  transform: inherit;
+  left: 0vw;
+  display: inline-block;
+  margin-right: 1vw;
 }
 
 button em
